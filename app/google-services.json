@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "752376487205",
+    "project_id": "gezirehberinahit",
+    "storage_bucket": "gezirehberinahit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752376487205:android:3b2867a360016e028b8ecc",
+        "android_client_info": {
+          "package_name": "com.example.gezirehberiappteacher"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWSsFu7zmVyjLkrPohUWESRZTjAiCBrEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
