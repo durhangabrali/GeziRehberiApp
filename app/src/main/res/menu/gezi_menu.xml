@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/girisYap"
+        android:title="Giriş Yap" />
+    <item
+        android:id="@+id/geziEkle"
+        android:title="Yer Ekle" />
+    <item
+        android:id="@+id/geziSil"
+        android:title="Yer Sil" />
+    <item
+        android:id="@+id/dilSecimi"
+        android:title="English" />
+</menu>

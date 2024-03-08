@@ -16,6 +16,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -46,4 +51,7 @@ dependencies {
     // When using the BoM, don't specify versions in Firebase dependencies
     // https://firebase.google.com/docs/android/setup#available-libraries
     implementation("com.google.firebase:firebase-analytics")
+
+    //Veri tabanından görselin download adresi geldiğinde görseli indirip gösterecek olan kütüphane
+    //implementation ("com.squareup.picasso:picasso:2.71828")
 }
