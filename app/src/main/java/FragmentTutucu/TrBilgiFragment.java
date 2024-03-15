@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
+import com.example.gezirehberiappteacher.KayitActivity;
 import com.example.gezirehberiappteacher.R;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +20,8 @@ import com.example.gezirehberiappteacher.R;
  * create an instance of this fragment.
  */
 public class TrBilgiFragment extends Fragment {
+
+    public static EditText yerAdi,ulkeAdi,sehirAdi,tarihce, hakkindaGiris;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +68,32 @@ public class TrBilgiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tr_bilgi, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+        yerAdi = view.findViewById(R.id.editText_YerAdiGiris);
+        ulkeAdi = view.findViewById(R.id.editText_UlkeGiris);
+        sehirAdi = view.findViewById(R.id.editText_SehirGiris);
+        tarihce = view.findViewById(R.id.editText_TarihGiris);
+        hakkindaGiris = view.findViewById(R.id.editText_HakkindaGiris);
+
+        veriEkranaGetir();
+    }
+
+    public  void veriEkranaGetir(){
+        if(!KayitActivity.yerAdiBilgi.equals("")){
+           yerAdi.setText(KayitActivity.yerAdiBilgi);
+        }
+        if(!KayitActivity.ulkeAdiBilgi.equals("")){
+            ulkeAdi.setText(KayitActivity.ulkeAdiBilgi);
+        }
+        if(!KayitActivity.sehirAdiBilgi.equals("")){
+            sehirAdi.setText(KayitActivity.sehirAdiBilgi);
+        }
+        if(!KayitActivity.hakkindaBilgi.equals("")){
+            hakkindaGiris.setText(KayitActivity.hakkindaBilgi);
+        }
     }
 }
