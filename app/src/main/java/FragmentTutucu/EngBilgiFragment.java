@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.gezirehberiappteacher.R;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +20,7 @@ import com.example.gezirehberiappteacher.R;
  * create an instance of this fragment.
  */
 public class EngBilgiFragment extends Fragment {
+    public static EditText placeName, countryName, cityName, history, aboutInfo;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +68,16 @@ public class EngBilgiFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_eng_bilgi, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+
+        placeName = view.findViewById(R.id.editText_NameInput);
+        countryName = view.findViewById(R.id.editText_CountryInput);
+        cityName = view.findViewById(R.id.editText_CityInput);
+        history = view.findViewById(R.id.editText_AboutInput);
+        aboutInfo = view.findViewById(R.id.editText_AboutInput);
+    }
+
 }
